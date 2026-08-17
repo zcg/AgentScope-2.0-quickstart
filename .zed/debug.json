@@ -1,0 +1,32 @@
+[
+  {
+    "adapter": "intellij_debugger",
+    "request": "launch",
+    "label": "Debug: Application (Spring Boot)",
+    "mainClass": "cn.da.shuai.agentscope.agentscope2quickstart.Application",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "vmArgs": ["-Xmx2g"]
+  },
+  {
+    "adapter": "intellij_debugger",
+    "request": "launch",
+    "label": "Debug: QuickStart (AgentScope)",
+    "mainClass": "cn.da.shuai.agentscope.agentscope2quickstart.QuickStart",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "buildBeforeLaunch": true
+  },
+  {
+    "adapter": "intellij_debugger",
+    "request": "launch",
+    "label": "Debug: FirstAgent (AgentScope)",
+    "mainClass": "cn.da.shuai.agentscope.agentscope2quickstart.FirstAgent",
+    "cwd": "$ZED_WORKTREE_ROOT",
+  },
+  {
+    "adapter": "intellij_debugger",
+    "request": "attach",
+    "label": "Attach: JDWP 5005",
+    "port": 5005,
+    "timeout": 30000
+  }
+]

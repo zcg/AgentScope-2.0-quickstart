@@ -1,0 +1,23 @@
+// AgentScope-2.0-quickstart -- Zed 项目配置
+// 参考 D:\Projects\intellij-lsp-zed\zed-config.example.jsonc 适配（Java 25 / Maven / Spring Boot 4）
+// 全局 settings.json 已配置 languages.Java -> intellij-server，这里只补充 LSP 服务端参数。
+{
+  "lsp": {
+    "intellij-server": {
+      "settings": {
+        // REQUIRED：必须先阅读并接受 JetBrains EULA
+        // https://www.jetbrains.com/legal/docs/toolbox/user/
+        "accept_jetbrains_eula": true,
+
+        // 构建工具：Maven（本项目为单模块，server 会自动定位 pom.xml）
+        "intellij.buildTool": "maven",
+
+        // 调试/索引期间给 IntelliJ server 更多堆内存
+        "intellij.additionalJvmArgs": ["-Xmx4g", "-XX:+UseG1GC"],
+
+        // 符号解析用的 JDK：对应 .idea/misc.xml 的 project-jdk-name=graalvm-25
+        "intellij.jdkForSymbolResolution": "D:\\Applications\\Scoop\\apps\\graalvm-oracle-jdk\\current"
+      }
+    }
+  }
+}

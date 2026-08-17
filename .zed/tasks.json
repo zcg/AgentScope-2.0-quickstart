@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Maven: compile (before debug)",
+    "command": "mvn compile -DskipTests",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+    "tags": ["build"]
+  },
+  {
+    "label": "Run QuickStart (AgentScope)",
+    "command": "mvn compile exec:java '-Dexec.mainClass=cn.da.shuai.agentscope.agentscope2quickstart.QuickStart'",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always",
+  },
+  {
+    "label": "Run FirstAgent (AgentScope)",
+    "command": "mvn compile exec:java '-Dexec.mainClass=cn.da.shuai.agentscope.agentscope2quickstart.FirstAgent'",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "Run Application (Spring Boot)",
+    "command": "mvn compile exec:java '-Dexec.mainClass=cn.da.shuai.agentscope.agentscope2quickstart.Application'",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  }
+]
